@@ -1,7 +1,8 @@
-USING MacroTracker;
+-- Created by Tyler Srive on 2/24/2017
+USE MacroTracker;
 
 CREATE TABLE dailyMacros(
-    int protein NOT NULL,
-    int fat NOT NULL,
-    int carbs NOT NULL
+    protein int NOT NULL,
+    fat int NOT NULL,
+    carbs int NOT NULL
 );

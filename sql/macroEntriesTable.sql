@@ -1,4 +1,5 @@
-USING MacroTracker;
+-- Created by Tyler Sriver on 2/24/2017
+USE MacroTracker;
 
 CREATE TABLE mealEntries (
     Id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
