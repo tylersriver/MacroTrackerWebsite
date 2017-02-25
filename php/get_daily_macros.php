@@ -1,11 +1,4 @@
 <?php
-// Created by Tyler Sriver on 2/24/2017
-
-// -- Get POST Variables
-// ------------------------------------------------------
-$protein = $_POST['protein'];
-$carbs = $_POST['carbs'];
-$fat = $_POST['fat'];
 
 // -- Setup MySQL Connection
 // ------------------------------------------------------
@@ -23,14 +16,11 @@ if($conn->connect_error){
 }
 
 // -- Process Data and Insert
-$sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat)
-          VALUES (NOW(), $protein, $carbs, $fat)";
+$sql  = "SELECT * FROM dailyMacros";
 try { // Execute insert
-  mysqli_query($conn, $sql);
+  $result = mysqli_query($conn, $sql);
 } catch (Exception $err) {
   die("Insert Failed: ".$err->error());
 }
-// End SQL
 
-header( "Location: http://192.168.1.76/MacroTrackerWebsite/html/home.html" );
-exit();
+// -- Pass to POST
