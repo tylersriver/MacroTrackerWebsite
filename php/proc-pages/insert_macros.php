@@ -6,6 +6,8 @@
  * database and then redirects back to home
  */
 
+// -- Includes
+// ------------------------------------------------------
 include_once("../lib/MySQL_Tool.php");
 
 // -- Get POST Variables
@@ -16,13 +18,17 @@ $fat = $_POST['fat'];
 $description = $_POST['description'];
 
 // -- Setup MySQL Connection
+// ------------------------------------------------------
 $conn = new MySQL_Tool();
 
 // -- Process Data and Insert
+// ------------------------------------------------------
 $sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat, description)
           VALUES (NOW(), $protein, $carbs, $fat, '$description')";
 $conn->executeInsert($sql);
-
 $conn->closeConn();
+
+// redirect page
+// ------------------------------------------------------
 header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/home.php" );
 exit();

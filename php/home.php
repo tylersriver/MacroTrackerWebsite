@@ -1,20 +1,24 @@
 <?php
 /**
- * Pull daily macros
- * and compare to meals to show whats left
+ * This file displays remaining daily macros
+ * and allows entry of a new meal
  */
 
-// -- Setup MySQL Connection
+// -- Includes
 // ------------------------------------------------------
 include_once ("global-header.php");
 include_once ("lib/MySQL_Tool.php");
+
+// -- Setup MySQL Connection and pull information
+// ------------------------------------------------------
 $conn = new MySQL_Tool();
 
-// Calculate remaining
+// Calculate remaining daily macros
 $protein_remaining = $conn->getRemainingMacro("protein");
 $fat_remaining = $conn->getRemainingMacro("fat");
 $carbs_remaining = $conn->getRemainingMacro("carbs");
 
+$conn->closeConn();
 ?>
 <div>
     <h2>Current Macros Left</h2>

@@ -4,20 +4,18 @@
  * User: tyler
  * Date: 4/11/2017
  * Time: 10:20 AM
+ *
+ * This file prints a table
+ * of all the entries for the day
  */
 
+// -- Includes
+// ------------------------------------------------------
 include_once ("global-header.php");
 include_once ("lib/MySQL_Tool.php");
 ?>
-
 <div>
     <h2>Meal Entries for Today</h2>
-<?php
-$conn = new MySQL_Tool();
-$sql = "SELECT TIME(entryTime), description, protein, fat, carbs FROM mealEntries WHERE DATE(entryTime) = DATE(NOW())";
-$result = $conn->executeSelect($sql);
-
-?>
 <link rel="stylesheet" type="text/css" href="../styles/table-styles.css">
 <table>
     <tr>
@@ -27,7 +25,17 @@ $result = $conn->executeSelect($sql);
         <th>Fat</th>
         <th>Carbs</th>
     </tr>
-<?php while ($row = mysqli_fetch_row($result)){
+<?php
+
+// -- Setup MySQL Conn and pull information
+// ------------------------------------------------------
+$conn = new MySQL_Tool();
+$sql = "SELECT TIME(entryTime), description, protein, fat, carbs FROM mealEntries WHERE DATE(entryTime) = DATE(NOW())";
+$result = $conn->executeSelect($sql);
+
+// -- echo information in table
+// ------------------------------------------------------
+while ($row = mysqli_fetch_row($result)){
     echo "<tr>";
     echo "    <td>".$row[0]."</td>";
     echo "    <td>".$row[1]."</td>";

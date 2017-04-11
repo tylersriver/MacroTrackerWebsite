@@ -4,6 +4,9 @@
  * User: tyler
  * Date: 4/11/2017
  * Time: 9:43 AM
+ *
+ * This is the html header used in all pages
+ * Includes: main header, stylesheet, and nav bar
  */
 ?>
 <!DOCTYPE html>

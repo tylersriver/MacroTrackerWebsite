@@ -3,23 +3,29 @@
  * Created by PhpStorm.
  * User: tyler
  * Date: 4/10/2017
+ *
+ * This file shows what the daily macros are
+ * set to and allows them to be changed
  */
 
+// -- Includes
+// ------------------------------------------------------
 include_once ("global-header.php");
 include_once ("lib/MySQL_Tool.php");
-$conn = new MySQL_Tool();
 
-// -- Process Data and Insert
+// -- open conn and Select From daily
+// ------------------------------------------------------
+$conn = new MySQL_Tool();
 $sql  = "SELECT protein, fat, carbs FROM dailyMacros";
 $result = $conn->executeSelect($sql);
-
-// -- Pass to POST
 $daily = $result->fetch_row();
+$conn->closeConn();
+
+// Store in variables
+// ------------------------------------------------------
 $protein = $daily[0];
 $fat = $daily[1];
 $carbs = $daily[2];
-
-$conn->closeConn();
 ?>
 <div>
     <h2>Current Daily Macros</h2>
