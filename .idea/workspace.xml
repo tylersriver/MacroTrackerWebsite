@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b8057d56-210e-412a-9199-9f6ace1e7db5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/daily-report.php" afterPath="$PROJECT_DIR$/php/daily-report.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/get_daily_macros.php" afterPath="$PROJECT_DIR$/php/get_daily_macros.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/global-header.php" afterPath="$PROJECT_DIR$/php/global-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/home.php" afterPath="$PROJECT_DIR$/php/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/proc-pages/insert_daily_macros.php" afterPath="$PROJECT_DIR$/php/proc-pages/insert_daily_macros.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/proc-pages/insert_macros.php" afterPath="$PROJECT_DIR$/php/proc-pages/insert_macros.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -153,25 +148,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="daily-report.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="daily-report.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/daily-report.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="613">
+              <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
               <folding>
                 <element signature="e#6#154#0#PHP" expanded="true" />
-                <marker date="1491929154110" expanded="true" signature="717:826" ph="SELECT TIME(... mealEntries" />
+                <marker date="1491929639852" expanded="true" signature="717:826" ph="SELECT TIME(... mealEntries" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib-config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/lib/lib-config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -210,9 +195,9 @@
         <option value="$PROJECT_DIR$/php/global-header.php" />
         <option value="$PROJECT_DIR$/php/proc-pages/insert_daily_macros.php" />
         <option value="$PROJECT_DIR$/php/proc-pages/insert_macros.php" />
-        <option value="$PROJECT_DIR$/php/daily-report.php" />
         <option value="$PROJECT_DIR$/php/home.php" />
         <option value="$PROJECT_DIR$/php/get_daily_macros.php" />
+        <option value="$PROJECT_DIR$/php/daily-report.php" />
       </list>
     </option>
   </component>
@@ -454,12 +439,12 @@
       <updated>1491443033563</updated>
       <workItem from="1491443035399" duration="1733000" />
       <workItem from="1491867834787" duration="13226000" />
-      <workItem from="1491921979300" duration="6537000" />
+      <workItem from="1491921979300" duration="6916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21496000" />
+    <option name="totallyTimeSpent" value="21875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -469,7 +454,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16979167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16302083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3213483" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -638,18 +623,6 @@
     <entry file="file://$PROJECT_DIR$/html/home.html" />
     <entry file="file://$PROJECT_DIR$/php/lib/sql-utils.php" />
     <entry file="file://$PROJECT_DIR$/php/lib/home-utils.php" />
-    <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.dailyMacros">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib-config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -709,19 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.mealEntries">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -774,17 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/daily-report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#154#0#PHP" expanded="true" />
-            <marker date="1491929154110" expanded="true" signature="717:826" ph="SELECT TIME(... mealEntries" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/proc-pages/insert_macros.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -813,6 +762,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/lib/lib-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#116#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.mealEntries">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.dailyMacros">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/lib/MySQL_Tool.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -823,11 +808,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/lib/lib-config.php">
+    <entry file="file://$PROJECT_DIR$/php/daily-report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="613">
+          <caret line="49" column="39" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="e#6#154#0#PHP" expanded="true" />
+            <marker date="1491929639852" expanded="true" signature="717:826" ph="SELECT TIME(... mealEntries" />
+          </folding>
         </state>
       </provider>
     </entry>

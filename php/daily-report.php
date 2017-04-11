@@ -43,6 +43,15 @@ while ($row = mysqli_fetch_row($result)){
     echo "    <td>".$row[3]."</td>";
     echo "    <td>".$row[4]."</td>";
     echo "</tr>";
-} ?>
+}
+
+// -- Pull and display SUMS
+echo "<tr>";
+echo "<td colspan='2'>Daily Sums</td>";
+echo "<td>".$conn->dailySum("protein")."</td>";
+echo "<td>".$conn->dailySum("fat")."</td>";
+echo "<td>".$conn->dailySum("carbs")."</td>";
+echo "<tr>";
+?>
 </table>
 </div>
