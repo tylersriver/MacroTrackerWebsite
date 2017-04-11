@@ -45,12 +45,32 @@ while ($row = mysqli_fetch_row($result)){
     echo "</tr>";
 }
 
+// -- echo empty row for separation
+// ------------------------------------------------------
+echo "<tr>";
+echo "    <td>---------</td>";
+echo "    <td>---------</td>";
+echo "    <td>---------</td>";
+echo "    <td>---------</td>";
+echo "    <td>---------</td>";
+echo "</tr>";
+
 // -- Pull and display SUMS
+// ------------------------------------------------------
 echo "<tr>";
 echo "<td colspan='2'>Daily Totals</td>";
 echo "<td>".$conn->dailySum("protein")."</td>";
 echo "<td>".$conn->dailySum("fat")."</td>";
 echo "<td>".$conn->dailySum("carbs")."</td>";
+echo "<tr>";
+
+// -- Pull and display remaining
+// ------------------------------------------------------
+echo "<tr>";
+echo "<td colspan='2'>Daily Remaining</td>";
+echo "<td>".$conn->getRemainingMacro("protein")."</td>";
+echo "<td>".$conn->getRemainingMacro("fat")."</td>";
+echo "<td>".$conn->getRemainingMacro("carbs")."</td>";
 echo "<tr>";
 ?>
 </table>
