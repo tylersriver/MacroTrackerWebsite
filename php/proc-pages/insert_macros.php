@@ -1,6 +1,7 @@
 <?php
-// Created by Tyler Sriver on 2/24/2017
 /**
+ * Created by Tyler Sriver on 2/24/2017
+ *
  * This file is called by home.php
  * to insert the meal values into the
  * database and then redirects back to home

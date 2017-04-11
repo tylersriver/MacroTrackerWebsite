@@ -5,9 +5,7 @@
  * User: tyler
  * Date: 4/11/2017
  * Time: 12:58 AM
- */
-
-/**
+ *
  * Class MySQL_Tool
  *
  * This is used to build and maintain
