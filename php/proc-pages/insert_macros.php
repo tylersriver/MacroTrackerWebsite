@@ -31,4 +31,5 @@ $conn->closeConn();
 // redirect page
 // ------------------------------------------------------
 header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/home.php" );
+//header("Location: ".__DIR__."../home.php");
 exit();

@@ -25,7 +25,7 @@ $conn = new MySQL_Tool();
 
 // Update Macros
 // ------------------------------------------------------
-$sql = "UPDATE dailyMacros 
+$sql = "UPDATE dailyMacros
           SET protein = $protein,  fat = $fat, carbs = $carbs";
 $conn->executeUpdate($sql);
 $conn->closeConn();
@@ -33,4 +33,5 @@ $conn->closeConn();
 // redirect page
 // ------------------------------------------------------
 header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/get_daily_macros.php" );
+//header("Location: ".__DIR__."../get_daily_macros.php");
 exit();
