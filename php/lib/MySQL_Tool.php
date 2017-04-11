@@ -33,6 +33,7 @@ class MySQL_Tool
     // ---------------------------------------------------
     /**
      * MySQL_Tool constructor.
+     * Build and setup connection
      */
     public function __construct()
     {

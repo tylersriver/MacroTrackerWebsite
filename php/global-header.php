@@ -18,6 +18,7 @@
     <h1>Macro Tracker</h1>
     <ul>
         <li><a href="home.php" class="button">Home</a></li>
-        <li><a href="../php/get_daily_macros.php" class="button">Daily Macros</a></li>
+        <li><a href="get_daily_macros.php" class="button">Daily Macros</a></li>
+        <li><a href="daily-report.php" class="button">Daily report</a></li>
     </ul>
 </header>
