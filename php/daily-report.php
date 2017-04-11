@@ -47,7 +47,7 @@ while ($row = mysqli_fetch_row($result)){
 
 // -- Pull and display SUMS
 echo "<tr>";
-echo "<td colspan='2'>Daily Sums</td>";
+echo "<td colspan='2'>Daily Totals</td>";
 echo "<td>".$conn->dailySum("protein")."</td>";
 echo "<td>".$conn->dailySum("fat")."</td>";
 echo "<td>".$conn->dailySum("carbs")."</td>";
