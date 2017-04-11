@@ -66,5 +66,4 @@ $carbs_remaining = $conn->getRemainingMacro("carbs");
         </table>
     </form>
 </div>
-</body>
 

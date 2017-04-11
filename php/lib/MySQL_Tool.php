@@ -122,4 +122,16 @@ class MySQL_Tool
 
         return $dailyMacro - $macro_day_sum;
     }
+
+    /**
+     * Get the sum of macro nutrient
+     * @param $macro string
+     * @return int
+     */
+    public function dailySum($macro){
+        $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
+        $macro_result = $this->executeSelect($sqlSelectSum);
+        $row = $macro_result->fetch_row();
+        return (int) $row[0];
+    }
 }
