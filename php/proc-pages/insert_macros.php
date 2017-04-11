@@ -13,13 +13,14 @@ include_once("../lib/MySQL_Tool.php");
 $protein = $_POST['protein'];
 $carbs = $_POST['carbs'];
 $fat = $_POST['fat'];
+$description = $_POST['description'];
 
 // -- Setup MySQL Connection
 $conn = new MySQL_Tool();
 
 // -- Process Data and Insert
-$sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat)
-          VALUES (NOW(), $protein, $carbs, $fat)";
+$sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat, description)
+          VALUES (NOW(), $protein, $carbs, $fat, '$description')";
 $conn->executeInsert($sql);
 
 $conn->closeConn();

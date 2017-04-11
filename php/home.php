@@ -28,7 +28,16 @@ $carbs_remaining = $conn->getRemainingMacro("carbs");
         <table>
             <tr>
                 <td valign="top">
+                    <label for="description">Description</label>
+                </td>
+                <td valign="top">
+                    <input type="text" name="description">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
                     <label for="protein">Protein</label>
+                </td>
                 <td valign="top">
                     <input type="text" name="protein">
                 </td>
@@ -36,6 +45,7 @@ $carbs_remaining = $conn->getRemainingMacro("carbs");
             <tr>
                 <td valign="top">
                     <label for="carbs">Carbs</label>
+                </td>
                 <td valign="top">
                     <input type="text" name="carbs">
                 </td>
@@ -43,6 +53,7 @@ $carbs_remaining = $conn->getRemainingMacro("carbs");
             <tr>
                 <td valign="top">
                     <label for="fat">Fat</label>
+                </td>
                 <td valign="top">
                     <input type="text" name="fat">
                 </td>

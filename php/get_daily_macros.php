@@ -34,6 +34,7 @@ $conn->closeConn();
             <tr>
                 <td valign="top">
                     <label>Protein</label>
+                </td>
                 <td valign="top">
                     <input type="text" name="protein">
                 </td>
@@ -41,6 +42,7 @@ $conn->closeConn();
             <tr>
                 <td valign="top">
                     <label>Carbs</label>
+                </td>
                 <td valign="top">
                     <input type="text" name="carbs">
                 </td>
@@ -48,6 +50,7 @@ $conn->closeConn();
             <tr>
                 <td valign="top">
                     <label>Fat</label>
+                </td>
                 <td valign="top">
                     <input type="text" name="fat">
                 </td>
