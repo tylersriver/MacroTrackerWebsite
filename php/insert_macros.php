@@ -28,9 +28,8 @@ $sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat)
 try { // Execute insert
   mysqli_query($conn, $sql);
 } catch (Exception $err) {
-  die("Insert Failed: ".$err->error());
-}
-// End SQL
+  die("Insert Failed: ".$err->getMessage());
+} // End SQL
 
 header( "Location: http://192.168.1.76/MacroTrackerWebsite/html/home.html" );
 exit();
