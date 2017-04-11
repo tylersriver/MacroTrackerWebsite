@@ -6,7 +6,7 @@
  * database and then redirects back to home
  */
 
-include_once ("lib/MySQL_Tool.php");
+include_once("../lib/MySQL_Tool.php");
 
 // -- Get POST Variables
 // ------------------------------------------------------

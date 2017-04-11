@@ -38,7 +38,7 @@ $conn->closeConn();
 </div>
 <div>
     <h2>Set Daily Macros</h2>
-    <form action="insert_daily_macros.php" method="post">
+    <form action="proc-pages/insert_daily_macros.php" method="post">
         <table>
             <tr>
                 <td valign="top">

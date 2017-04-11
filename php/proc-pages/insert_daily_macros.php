@@ -6,7 +6,7 @@
  * Time: 8:03 PM
  */
 
-include_once ("lib/MySQL_Tool.php");
+include_once("../lib/MySQL_Tool.php");
 
 // -- Get POST Variables
 // ------------------------------------------------------

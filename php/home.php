@@ -54,7 +54,7 @@ $carbs_remaining = $carbsDaily - $carbs_day_sum;
 </div>
 <div>
     <h2>Insert Meal</h2>
-    <form action="../php/insert_macros.php" method="post">
+    <form action="proc-pages/insert_macros.php" method="post">
         <table>
             <tr>
                 <td valign="top">
