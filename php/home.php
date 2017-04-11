@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <!-- Created by Tyler Sriver on 4/10/2017 -->
-<header>
+<head>
     <title>Macro Tracker</title>
-</header>
+    <link rel="stylesheet" type="text/css" href="../styles/global-styles.css">
+</head>
 <body>
 <header>
     <ul>

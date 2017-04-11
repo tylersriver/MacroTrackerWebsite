@@ -20,9 +20,10 @@ $carbs = $daily[2];
 
 $conn->closeConn();
 ?>
-<header>
+<head>
     <title>Macro Tracker</title>
-</header>
+    <link rel="stylesheet" type="text/css" href="../styles/global-styles.css">
+</head>
 <body>
 <header>
     <ul>
