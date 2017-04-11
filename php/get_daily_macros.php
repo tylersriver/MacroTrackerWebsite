@@ -26,6 +26,7 @@ $conn->closeConn();
 </head>
 <body>
 <header>
+    <h1>Macro Tracker</h1>
     <ul>
         <li><a href="home.php" class="button">Home</a></li>
         <li><a href="get_daily_macros.php" class="button">Daily Macros</a></li>
