@@ -5,16 +5,12 @@
  * Date: 4/10/2017
  */
 
-include_once ("lib/sql-utils.php");
-$conn = setupConnection();
+include_once ("lib/MySQL_Tool.php");
+$conn = new MySQL_Tool();
 
 // -- Process Data and Insert
 $sql  = "SELECT protein, fat, carbs FROM dailyMacros";
-try { // Execute insert
-  $result = mysqli_query($conn, $sql);
-} catch (Exception $err) {
-  die("Insert Failed: ".$err->getMessage());
-}
+$result = $conn->executeSelect($sql);
 
 // -- Pass to POST
 $daily = $result->fetch_row();
@@ -22,7 +18,7 @@ $protein = $daily[0];
 $fat = $daily[1];
 $carbs = $daily[2];
 
-$conn->close();
+$conn->closeConn();
 ?>
 <header>
     <title>Macro Tracker</title>

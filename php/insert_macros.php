@@ -6,7 +6,7 @@
  * database and then redirects back to home
  */
 
-include_once ("lib/sql-utils.php");
+include_once ("lib/MySQL_Tool.php");
 
 // -- Get POST Variables
 // ------------------------------------------------------
@@ -15,17 +15,13 @@ $carbs = $_POST['carbs'];
 $fat = $_POST['fat'];
 
 // -- Setup MySQL Connection
-$conn = setupConnection();
+$conn = new MySQL_Tool();
 
 // -- Process Data and Insert
 $sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat)
           VALUES (NOW(), $protein, $carbs, $fat)";
-try { // Execute insert
-  mysqli_query($conn, $sql);
-} catch (Exception $err) {
-  die("Insert Failed: ".$err->getMessage());
-} // End SQL
+$conn->executeInsert($sql);
 
-$conn->close();
+$conn->closeConn();
 header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/home.php" );
 exit();

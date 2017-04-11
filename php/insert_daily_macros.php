@@ -6,7 +6,7 @@
  * Time: 8:03 PM
  */
 
-include_once ("lib/sql-utils.php");
+include_once ("lib/MySQL_Tool.php");
 
 // -- Get POST Variables
 // ------------------------------------------------------
@@ -16,17 +16,11 @@ $fat = $_POST['fat'];
 
 // -- Setup MySQL Connection
 // ------------------------------------------------------
-$conn = setupConnection();
+$conn = new MySQL_Tool();
 
 // Update Macros
 $sql = "UPDATE dailyMacros 
           SET protein = $protein,  fat = $fat, carbs = $carbs";
-
-try { // Execute insert
-    mysqli_query($conn, $sql);
-} catch (Exception $err) {
-    die("Insert Failed: ".$err->getMessage());
-} // End SQL
-
-$conn->close();
+$conn->executeUpdate($sql);
+$conn->closeConn();
 header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/get_daily_macros.php" );
