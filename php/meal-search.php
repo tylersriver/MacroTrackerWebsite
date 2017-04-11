@@ -63,3 +63,4 @@ while ($row = mysqli_fetch_row($result)){
     echo "</tr>";
 } ?>
         </table>
+    </div>
