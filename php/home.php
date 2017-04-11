@@ -12,8 +12,29 @@
     </ul>
 </header>
 <?php
-// Pull Current Numbers
+/**
+ * Pull daily macros
+ * and compare to meals to show whats left
+ */
 
+// -- Setup MySQL Connection
+// ------------------------------------------------------
+include_once ("lib/sql-utils.php");
+$conn = setupConnection();
+
+// Pull and Store Daily Values
+$sql  = "SELECT protein, fat, carbs FROM dailyMacros";
+try { // Execute insert
+    $result = mysqli_query($conn, $sql);
+} catch (Exception $err) {
+    die("Insert Failed: ".$err->getMessage());
+}
+
+// -- Store Values
+$daily = $result->fetch_row();
+$proteinDaily = $daily[0];
+$fatDaily = $daily[1];
+$carbsDaily = $daily[2];
 ?>
 <div>
     <form action="../php/insert_macros.php" method="post">

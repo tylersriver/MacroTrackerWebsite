@@ -6,6 +6,8 @@
  * database and then redirects back to home
  */
 
+include_once ("lib/sql-utils.php");
+
 // -- Get POST Variables
 // ------------------------------------------------------
 $protein = $_POST['protein'];
@@ -13,19 +15,7 @@ $carbs = $_POST['carbs'];
 $fat = $_POST['fat'];
 
 // -- Setup MySQL Connection
-// ------------------------------------------------------
-$servername = "localhost";
-$username = "root";
-$password = "newpwd";
-$db = "MacroTracker";
-
-// Open Connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-// Check Connection
-if($conn->connect_error){
-  die("Connection failed: " . $conn->connect_error);
-}
+$conn = setupConnection();
 
 // -- Process Data and Insert
 $sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat)

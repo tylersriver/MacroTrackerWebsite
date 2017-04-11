@@ -6,6 +6,8 @@
  * Time: 8:03 PM
  */
 
+include_once ("lib/sql-utils.php");
+
 // -- Get POST Variables
 // ------------------------------------------------------
 $protein = $_POST['protein'];
@@ -14,18 +16,7 @@ $fat = $_POST['fat'];
 
 // -- Setup MySQL Connection
 // ------------------------------------------------------
-$servername = "localhost";
-$username = "root";
-$password = "newpwd";
-$db = "MacroTracker";
-
-// Open Connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-// Check Connection
-if($conn->connect_error){
-    die("Connection failed: " . $conn->connect_error);
-}
+$conn = setupConnection();
 
 // Update Macros
 $sql = "UPDATE dailyMacros 

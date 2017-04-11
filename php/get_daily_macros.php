@@ -1,19 +1,12 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: tyler
+ * Date: 4/10/2017
+ */
 
-// -- Setup MySQL Connection
-// ------------------------------------------------------
-$servername = "localhost";
-$username = "root";
-$password = "newpwd";
-$db = "MacroTracker";
-
-// Open Connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-// Check Connection
-if($conn->connect_error){
-  die("Connection failed: " . $conn->connect_error);
-}
+include_once ("lib/sql-utils.php");
+$conn = setupConnection();
 
 // -- Process Data and Insert
 $sql  = "SELECT protein, fat, carbs FROM dailyMacros";
