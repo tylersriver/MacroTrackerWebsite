@@ -22,28 +22,10 @@
 include_once ("lib/MySQL_Tool.php");
 $conn = new MySQL_Tool();
 
-// Pull and Store Daily Values in variables
-$sql  = "SELECT protein, fat, carbs FROM dailyMacros";
-$result = $conn->executeSelect($sql);
-$daily = $result->fetch_row();
-$proteinDaily = $daily[0];
-$fatDaily = $daily[1];
-$carbsDaily = $daily[2];
-
-// Get Day Totals
-$protein_result = mysqli_fetch_row($conn->executeSelect("SELECT SUM(m.protein) FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())"));
-$protein_day_sum = $protein_result[0];
-
-$fat_result = mysqli_fetch_row($conn->executeSelect("SELECT SUM(m.fat) FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())"));
-$fat_day_sum = $fat_result[0];
-
-$carbs_result = mysqli_fetch_row($conn->executeSelect("SELECT SUM(m.carbs) FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())"));
-$carbs_day_sum = $carbs_result[0];
-
 // Calculate remaining
-$protein_remaining = $proteinDaily - $protein_day_sum;
-$fat_remaining = $fatDaily - $fat_day_sum;
-$carbs_remaining = $carbsDaily - $carbs_day_sum;
+$protein_remaining = $conn->getRemainingMacro("protein");
+$fat_remaining = $conn->getRemainingMacro("fat");
+$carbs_remaining = $conn->getRemainingMacro("carbs");
 
 ?>
 <div>

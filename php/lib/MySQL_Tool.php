@@ -99,5 +99,26 @@ class MySQL_Tool
         $this->conn->close();
     }
 
+    // Remaining Check Functions
+    // ---------------------------------------------------
 
+    /**
+     * Get remaining protein balance for
+     * the day
+     * @param $macro string
+     * @return int
+     */
+    public function getRemainingMacro($macro) {
+        $sqlSelect = "SELECT ".$macro." FROM dailyMacros";
+        $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
+
+        $result = $this->executeSelect($sqlSelect);
+        $macro = $result->fetch_row();
+        $dailyMacro = $macro[0];
+
+        $macro_result = mysqli_fetch_row($this->executeSelect($sqlSelectSum));
+        $macro_day_sum = $macro_result[0];
+
+        return $dailyMacro - $macro_day_sum;
+    }
 }
