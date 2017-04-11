@@ -10,7 +10,3 @@
 
 // -- Set Namespace variables
 // ------------------------------------------------
-$global_servername = "localhost";
-$global_username = "root";
-$global_password = "newpwd";
-$global_db = "MacroTracker";
