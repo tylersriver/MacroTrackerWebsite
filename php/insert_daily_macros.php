@@ -1,9 +1,9 @@
 <?php
-// Created by Tyler Sriver on 2/24/2017
 /**
- * This file is called by home.php
- * to insert the meal values into the
- * database and then redirects back to home
+ * Created by PhpStorm.
+ * User: tyler
+ * Date: 4/10/2017
+ * Time: 8:03 PM
  */
 
 // -- Get POST Variables
@@ -24,18 +24,18 @@ $conn = new mysqli($servername, $username, $password, $db);
 
 // Check Connection
 if($conn->connect_error){
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
-// -- Process Data and Insert
-$sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat)
-          VALUES (NOW(), $protein, $carbs, $fat)";
+// Update Macros
+$sql = "UPDATE dailyMacros 
+          SET protein = $protein,  fat = $fat, carbs = $carbs";
+
 try { // Execute insert
-  mysqli_query($conn, $sql);
+    mysqli_query($conn, $sql);
 } catch (Exception $err) {
-  die("Insert Failed: ".$err->getMessage());
+    die("Insert Failed: ".$err->getMessage());
 } // End SQL
 
 $conn->close();
-header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/home.php" );
-exit();
+header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/get_daily_macros.php" );
