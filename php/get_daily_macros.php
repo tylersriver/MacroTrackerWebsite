@@ -5,6 +5,7 @@
  * Date: 4/10/2017
  */
 
+include_once ("global-header.php");
 include_once ("lib/MySQL_Tool.php");
 $conn = new MySQL_Tool();
 
@@ -20,18 +21,6 @@ $carbs = $daily[2];
 
 $conn->closeConn();
 ?>
-<head>
-    <title>Macro Tracker</title>
-    <link rel="stylesheet" type="text/css" href="../styles/global-styles.css">
-</head>
-<body>
-<header>
-    <h1>Macro Tracker</h1>
-    <ul>
-        <li><a href="home.php" class="button">Home</a></li>
-        <li><a href="get_daily_macros.php" class="button">Daily Macros</a></li>
-    </ul>
-</header>
 <div>
     <h2>Current Daily Macros</h2>
     <p>Protein: <?php echo $protein ?> </p>

@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-<!-- Created by Tyler Sriver on 4/10/2017 -->
-<head>
-    <title>Macro Tracker</title>
-    <link rel="stylesheet" type="text/css" href="../styles/global-styles.css">
-</head>
-<body>
-<header>
-    <h1>Macro Tracker</h1>
-    <ul>
-        <li><a href="home.php" class="button">Home</a></li>
-        <li><a href="../php/get_daily_macros.php" class="button">Daily Macros</a></li>
-    </ul>
-</header>
 <?php
 /**
  * Pull daily macros
@@ -21,6 +6,7 @@
 
 // -- Setup MySQL Connection
 // ------------------------------------------------------
+include_once ("global-header.php");
 include_once ("lib/MySQL_Tool.php");
 $conn = new MySQL_Tool();
 
