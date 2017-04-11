@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8057d56-210e-412a-9199-9f6ace1e7db5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/lib/MySQL_Tool.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/lib/lib-config.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/php/lib/sql-utils.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/get_daily_macros.php" afterPath="$PROJECT_DIR$/php/get_daily_macros.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/home.php" afterPath="$PROJECT_DIR$/php/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/insert_daily_macros.php" afterPath="$PROJECT_DIR$/php/insert_daily_macros.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/insert_macros.php" afterPath="$PROJECT_DIR$/php/insert_macros.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,11 +71,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="get_daily_macros.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_daily_macros.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/get_daily_macros.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="420">
+              <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
               <folding>
                 <element signature="e#6#71#0#PHP" expanded="true" />
                 <marker date="1491892721911" expanded="true" signature="176:219" ph="SELECT * FRO... dailyMacros" />
@@ -90,14 +84,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+            <state relative-caret-position="800">
+              <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
               <folding>
                 <element signature="e#319#390#0#PHP" expanded="true" />
-                <marker date="1491892380074" expanded="true" signature="583:626" ph="SELECT prote... dailyMacros" />
+                <marker date="1491893882128" expanded="true" signature="596:639" ph="SELECT prote... dailyMacros" />
+                <marker date="1491893882128" expanded="true" signature="862:938" ph="SELECT SUM(m... mealEntries" />
+                <marker date="1491893882128" expanded="true" signature="1036:1108" ph="SELECT SUM(m... mealEntries" />
+                <marker date="1491893882128" expanded="true" signature="1200:1274" ph="SELECT SUM(m... mealEntries" />
+                <marker date="1491893882128" expanded="true" signature="1799:1844" ph="..." />
+                <marker date="1491893882128" expanded="true" signature="1816:1844" ph="..." />
+                <marker date="1491893882128" expanded="true" signature="2053:2081" ph="..." />
+                <marker date="1491893882128" expanded="true" signature="2284:2312" ph="..." />
+                <marker date="1491893882128" expanded="true" signature="2509:2536" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,6 +107,31 @@
       </file>
       <file leaf-file-name="MacroTracker.dailyMacros" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.dailyMacros">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c05a3cff-e727-457f-92e8-2898eb6b56f3/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="76" lean-forward="false" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MacroTracker.mealEntries" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.mealEntries">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -190,15 +217,16 @@
       <list>
         <option value="dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.mealEntries" />
         <option value="$PROJECT_DIR$/html/setDailyMacros.html" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c05a3cff-e727-457f-92e8-2898eb6b56f3/console.sql" />
         <option value="$PROJECT_DIR$/html/home.html" />
         <option value="$PROJECT_DIR$/php/lib/sql-utils.php" />
         <option value="$PROJECT_DIR$/php/lib/lib-config.php" />
-        <option value="$PROJECT_DIR$/php/home.php" />
         <option value="$PROJECT_DIR$/php/insert_macros.php" />
         <option value="$PROJECT_DIR$/php/insert_daily_macros.php" />
         <option value="$PROJECT_DIR$/php/lib/MySQL_Tool.php" />
         <option value="$PROJECT_DIR$/php/get_daily_macros.php" />
+        <option value="$PROJECT_DIR$/php/lib/home-utils.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c05a3cff-e727-457f-92e8-2898eb6b56f3/console.sql" />
+        <option value="$PROJECT_DIR$/php/home.php" />
       </list>
     </option>
   </component>
@@ -257,24 +285,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MacroTrackerWebsite" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MacroTrackerWebsite" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,18 +390,18 @@
       <option name="presentableId" value="Default" />
       <updated>1491443033563</updated>
       <workItem from="1491443035399" duration="1733000" />
-      <workItem from="1491867834787" duration="9171000" />
+      <workItem from="1491867834787" duration="10374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10904000" />
+    <option name="totallyTimeSpent" value="12107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12291667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -452,14 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c05a3cff-e727-457f-92e8-2898eb6b56f3/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="61" lean-forward="false" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/setDailyMacros.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -484,31 +486,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/lib/lib-config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#6#116#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/lib/sql-utils.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/insert_macros.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding>
-            <marker date="1491892410013" expanded="true" signature="467:572" ph="INSERT INTO mealEntries... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -529,6 +511,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/get_daily_macros.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#71#0#PHP" expanded="true" />
+            <marker date="1491892721911" expanded="true" signature="176:219" ph="SELECT * FRO... dailyMacros" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/lib/MySQL_Tool.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -539,26 +532,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/home.php">
+    <entry file="file://$PROJECT_DIR$/php/insert_macros.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        <state relative-caret-position="520">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding>
-            <element signature="e#319#390#0#PHP" expanded="true" />
-            <marker date="1491892380074" expanded="true" signature="583:626" ph="SELECT prote... dailyMacros" />
+            <marker date="1491892410013" expanded="true" signature="467:572" ph="INSERT INTO mealEntries... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.dailyMacros">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/php/lib/lib-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#116#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/lib/home-utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -576,13 +573,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/get_daily_macros.php">
+    <entry file="dbDummy://dbtable:/e87aa1b1/c05a3cff-e727-457f-92e8-2898eb6b56f3/MacroTracker.dailyMacros">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c05a3cff-e727-457f-92e8-2898eb6b56f3/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="0">
+          <caret line="0" column="76" lean-forward="false" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
           <folding>
-            <element signature="e#6#71#0#PHP" expanded="true" />
-            <marker date="1491892721911" expanded="true" signature="176:219" ph="SELECT * FRO... dailyMacros" />
+            <element signature="e#319#390#0#PHP" expanded="true" />
+            <marker date="1491893882128" expanded="true" signature="596:639" ph="SELECT prote... dailyMacros" />
+            <marker date="1491893882128" expanded="true" signature="862:938" ph="SELECT SUM(m... mealEntries" />
+            <marker date="1491893882128" expanded="true" signature="1036:1108" ph="SELECT SUM(m... mealEntries" />
+            <marker date="1491893882128" expanded="true" signature="1200:1274" ph="SELECT SUM(m... mealEntries" />
+            <marker date="1491893882128" expanded="true" signature="1799:1844" ph="..." />
+            <marker date="1491893882128" expanded="true" signature="1816:1844" ph="..." />
+            <marker date="1491893882128" expanded="true" signature="2053:2081" ph="..." />
+            <marker date="1491893882128" expanded="true" signature="2284:2312" ph="..." />
+            <marker date="1491893882128" expanded="true" signature="2509:2536" ph="..." />
           </folding>
         </state>
       </provider>
