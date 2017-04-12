@@ -48,18 +48,18 @@ $conn->closeConn();
             </tr>
             <tr>
                 <td valign="top">
-                    <label for="carbs">Carbs</label>
-                </td>
-                <td valign="top">
-                    <input type="text" name="carbs">
-                </td>
-            </tr>
-            <tr>
-                <td valign="top">
                     <label for="fat">Fat</label>
                 </td>
                 <td valign="top">
                     <input type="text" name="fat">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <label for="carbs">Carbs</label>
+                </td>
+                <td valign="top">
+                    <input type="text" name="carbs">
                 </td>
             </tr>
             <tr>
