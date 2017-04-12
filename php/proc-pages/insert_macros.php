@@ -31,9 +31,9 @@ $conn->closeConn();
 
 // redirect page
 // ------------------------------------------------------
-if($_SERVER['REMOTE_ADDR'] == '192.168.1.76'){
+if($_SERVER['REMOTE_ADDR'] == '192.168.1.70'){
     header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/home.php" );
 } else {
-    header(" Location: http://sriver.hopto.org/MacroTrackerWebsite/php/home.php");
+    header("Location: http://sriver.hopto.org/MacroTrackerWebsite/php/home.php");
 }
 exit();

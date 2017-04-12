@@ -23,6 +23,6 @@
         <li><a href="home.php" class="button">Home</a></li>
         <li><a href="get_daily_macros.php" class="button">Daily Macros</a></li>
         <li><a href="daily-report.php" class="button">Daily report</a></li>
-        <li><a href="daily-report.php" class="button">Meal Search</a></li>
+        <li><a href="meal-search.php" class="button">Meal Search</a></li>
     </ul>
 </header>
