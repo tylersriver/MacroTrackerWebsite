@@ -18,21 +18,7 @@ include_once ("lib/MySQL_Tool.php");
 <div>
     <h2>Search For Meal</h2>
     <form action="meal-search.php" method="post">
-        <table>
-            <tr>
-                <td valign="top">
-                    <label for="description">Description</label>
-                </td>
-                <td valign="top">
-                    <input type="text" name="description">
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align:center">
-                    <input type="submit" value="Search">
-                </td>
-            </tr>
-        </table>
+        <p>Description: <input type="text" name="description"> <input type="submit" value="Search"></p>
     </form>
 </div>
 <div>
@@ -49,7 +35,7 @@ include_once ("lib/MySQL_Tool.php");
 // ------------------------------------------------------
 $conn = new MySQL_Tool();
 $description = $_POST['description'];
-$sql = "SELECT (description, protein, fat, carbs) FROM mealEntries WHERE description LIKE '%".$description."%'";
+$sql = "SELECT description, protein, fat, carbs FROM mealEntries WHERE description LIKE '%".$description."%'";
 $result = $conn->executeSelect($sql);
 
 // -- echo information in table
