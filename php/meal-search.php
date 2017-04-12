@@ -35,7 +35,10 @@ include_once ("lib/MySQL_Tool.php");
 // ------------------------------------------------------
 $conn = new MySQL_Tool();
 $description = $_POST['description'];
-$sql = "SELECT description, protein, fat, carbs FROM mealEntries WHERE description LIKE '%".$description."%'";
+$sql = "SELECT description, protein, fat, carbs 
+        FROM mealEntries
+         WHERE description  
+         LIKE '%".$description."%'";
 $result = $conn->executeSelect($sql);
 
 // -- echo information in table
