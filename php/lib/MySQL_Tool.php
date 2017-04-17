@@ -146,7 +146,8 @@ class MySQL_Tool
      * @param $str
      * @return string
      */
-    public function filterLetterString($str){
-        return filter_var($str, FILTER_SANITIZE_STRING);
+    public function filterLetterString($str)
+    {
+        return preg_replace("/[^a-zA-Z]/", "", $str);
     }
 }

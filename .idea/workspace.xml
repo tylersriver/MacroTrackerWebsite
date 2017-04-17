@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b8057d56-210e-412a-9199-9f6ace1e7db5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/lib/MySQL_Tool.php" afterPath="$PROJECT_DIR$/php/lib/MySQL_Tool.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/proc-pages/insert_macros.php" afterPath="$PROJECT_DIR$/php/proc-pages/insert_macros.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,62 +59,44 @@
     <favorites_list name="MacroTrackerWebsite" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4240182">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="insert_daily_macros.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/php/proc-pages/insert_daily_macros.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="774">
-                  <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#6#153#0#PHP" expanded="true" />
-                    <marker date="1491960114283" expanded="true" signature="627:701" ph="UPDATE daily... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="insert_macros.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/php/proc-pages/insert_macros.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="489">
-                  <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#6#173#0#PHP" expanded="true" />
-                    <marker date="1492471912402" expanded="true" signature="924:1058" ph="INSERT INTO mealEntries... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MySQL_Tool.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/php/lib/MySQL_Tool.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="20">
-                  <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="MySQL_Tool.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/php/lib/MySQL_Tool.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="609">
-                  <caret line="144" column="30" lean-forward="false" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="insert_daily_macros.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/proc-pages/insert_daily_macros.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#153#0#PHP" expanded="true" />
+                <marker date="1491960114283" expanded="true" signature="627:701" ph="UPDATE daily... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert_macros.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/proc-pages/insert_macros.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="28" column="40" lean-forward="false" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+              <folding>
+                <element signature="e#6#173#0#PHP" expanded="true" />
+                <marker date="1492471912402" expanded="true" signature="924:1058" ph="INSERT INTO mealEntries... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQL_Tool.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/lib/MySQL_Tool.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="669">
+              <caret line="149" column="4" lean-forward="false" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -385,12 +366,12 @@
       <workItem from="1491921979300" duration="7287000" />
       <workItem from="1491946215547" duration="1996000" />
       <workItem from="1491959677262" duration="2976000" />
-      <workItem from="1492470440986" duration="1487000" />
+      <workItem from="1492470440986" duration="2105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28705000" />
+    <option name="totallyTimeSpent" value="29323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="5" width="1016" height="1032" extended-state="0" />
@@ -802,6 +783,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="2098" column="25" lean-forward="false" selection-start-line="2098" selection-start-column="25" selection-end-line="2098" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/lib/MySQL_Tool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="149" column="4" lean-forward="false" selection-start-line="149" selection-start-column="4" selection-end-line="149" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/proc-pages/insert_daily_macros.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
@@ -813,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="2098" column="25" lean-forward="false" selection-start-line="2098" selection-start-column="25" selection-end-line="2098" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/proc-pages/insert_macros.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
@@ -829,14 +818,6 @@
             <element signature="e#6#173#0#PHP" expanded="true" />
             <marker date="1492471912402" expanded="true" signature="924:1058" ph="INSERT INTO mealEntries... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/lib/MySQL_Tool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="144" column="30" lean-forward="false" selection-start-line="144" selection-start-column="30" selection-end-line="144" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
