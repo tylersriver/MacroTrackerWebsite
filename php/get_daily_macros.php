@@ -42,7 +42,7 @@ $carbs = $daily[2];
                     <label>Protein</label>
                 </td>
                 <td valign="top">
-                    <input type="text" name="protein">
+                    <input type="number" maxlength="3" name="protein">
                 </td>
             </tr>
             <tr>
@@ -50,7 +50,7 @@ $carbs = $daily[2];
                     <label>Carbs</label>
                 </td>
                 <td valign="top">
-                    <input type="text" name="carbs">
+                    <input type="number" maxlength="3" name="carbs">
                 </td>
             </tr>
             <tr>
@@ -58,7 +58,7 @@ $carbs = $daily[2];
                     <label>Fat</label>
                 </td>
                 <td valign="top">
-                    <input type="text" name="fat">
+                    <input type="number" maxlength="3" name="fat">
                 </td>
             </tr>
             <tr>
