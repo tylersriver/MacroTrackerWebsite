@@ -46,7 +46,8 @@ class MySQL_Tool
     /**
      * Setup Connection to database
      */
-    private function setupConnection(){
+    private function setupConnection()
+    {
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->db);
         if($this->conn->connect_error){
             die("Connection failed: " . $this->conn->connect_error);
@@ -57,7 +58,8 @@ class MySQL_Tool
      * Execute an insert statement
      * @param $sql string
      */
-    public function executeInsert($sql){
+    public function executeInsert($sql)
+    {
         try { // Execute insert
             mysqli_query($this->conn, $sql);
         } catch (Exception $err) {
@@ -70,7 +72,8 @@ class MySQL_Tool
      * @param $sql
      * @return bool|mysqli_result
      */
-    public function executeSelect($sql){
+    public function executeSelect($sql)
+    {
         try { // Execute insert
             $result = mysqli_query($this->conn, $sql);
         } catch (Exception $err) {
@@ -83,7 +86,8 @@ class MySQL_Tool
      * Execute Update statement
      * @param $sql string
      */
-    public function executeUpdate($sql){
+    public function executeUpdate($sql)
+    {
         try { // Execute insert
             mysqli_query($this->conn, $sql);
         } catch (Exception $err) {
@@ -94,7 +98,8 @@ class MySQL_Tool
     /**
      * close mysql conn
      */
-    public function closeConn(){
+    public function closeConn()
+    {
         $this->conn->close();
     }
 
@@ -107,7 +112,8 @@ class MySQL_Tool
      * @param $macro string
      * @return int
      */
-    public function getRemainingMacro($macro) {
+    public function getRemainingMacro($macro)
+    {
         $sqlSelect = "SELECT ".$macro." FROM dailyMacros";
         $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
 
@@ -126,10 +132,21 @@ class MySQL_Tool
      * @param $macro string
      * @return int
      */
-    public function dailySum($macro){
+    public function dailySum($macro)
+    {
         $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
         $macro_result = $this->executeSelect($sqlSelectSum);
         $row = $macro_result->fetch_row();
         return (int) $row[0];
+    }
+
+    /**
+     * Filter the given string and return only
+     * alphanumeric characters
+     * @param $str
+     * @return string
+     */
+    public function filterLetterString($str){
+        return filter_var($str, FILTER_SANITIZE_STRING);
     }
 }

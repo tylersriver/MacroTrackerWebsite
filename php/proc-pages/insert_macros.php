@@ -11,16 +11,22 @@
 // ------------------------------------------------------
 include_once("../lib/MySQL_Tool.php");
 
+// -- Setup MySQL Connection
+// ------------------------------------------------------
+$conn = new MySQL_Tool();
+
 // -- Get POST Variables
 // ------------------------------------------------------
 $protein = $_POST['protein'];
 $carbs = $_POST['carbs'];
 $fat = $_POST['fat'];
-$description = $_POST['description'];
 
-// -- Setup MySQL Connection
+// -- Sanitize
 // ------------------------------------------------------
-$conn = new MySQL_Tool();
+if(!is_int($protein) || !is_int($carbs) || !is_int($fat)){
+    die("Incorrect Data Input"); // Kill if possible injection
+}
+$description = $conn->filterLetterString($_POST['description']);
 
 // -- Process Data and Insert
 // ------------------------------------------------------
