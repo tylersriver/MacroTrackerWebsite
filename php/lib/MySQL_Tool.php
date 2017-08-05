@@ -58,7 +58,7 @@ class MySQL_Tool
      * Execute an insert statement
      * @param $sql string
      */
-    public function executeInsert($sql)
+    public function executeInsert($sql, $params)
     {
         try { // Execute insert
             mysqli_query($this->conn, $sql);
@@ -93,6 +93,42 @@ class MySQL_Tool
         } catch (Exception $err) {
             die("Update Failed: ".$err->getMessage());
         } // End SQL
+    }
+
+    /**
+     * MySQLi bound query function
+     *
+     * @param $sql string
+     * @param $params array
+     * @return mysqli_result
+     */
+    public function query($sql, $params)
+    {
+        // Initiate statement
+        $stmt = $conn->prepare($sql);
+        
+        // Bind Params
+        foreach($params as $p){
+            $stmt->bind_param($p);
+        }
+
+        try { // Execute SQL
+            $stmt->execute();
+        } catch (Exception $err) {
+            die("Query Failed: ".$err->getMessage());
+        } // End SQL
+
+        // Get Results
+        $stmt->bind_result($result);
+        $stmt->fetch();
+
+        if (empty($result)) {
+            return false;
+        } else {
+            $this->setPass(true);
+            return $result;
+        }
+
     }
 
     /**

@@ -39,8 +39,8 @@ if($description != null) {
     $sql = "SELECT description, protein, fat, carbs 
             FROM mealEntries
             WHERE description  
-            LIKE '%".$description."%'";
-    $result = $conn->executeSelect($sql);
+            LIKE ?";
+    $result = $conn->query($sql, array('%'.$description.'%'));
 
     $conn->closeConn();
 
