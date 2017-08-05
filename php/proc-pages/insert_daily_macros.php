@@ -32,9 +32,5 @@ $conn->closeConn();
 
 // redirect page
 // ------------------------------------------------------
-if($_SERVER['REMOTE_ADDR'] == '192.168.1.70'){
-    header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/get_daily_macros.php" );
-} else {
-    header("Location: http://sriver.hopto.org/MacroTrackerWebsite/php/get_daily_macros.php");
-}
+header( "Location: http://localhost/xampp/MacroTrackerWebsite/php/get_daily_macros.php" );
 exit();

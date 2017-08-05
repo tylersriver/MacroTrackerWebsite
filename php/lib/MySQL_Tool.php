@@ -139,15 +139,4 @@ class MySQL_Tool
         $row = $macro_result->fetch_row();
         return (int) $row[0];
     }
-
-    /**
-     * Filter the given string and return only
-     * alphanumeric characters
-     * @param $str
-     * @return string
-     */
-    public function filterLetterString($str)
-    {
-        return preg_replace("/[^a-zA-Z]/", "", $str);
-    }
 }

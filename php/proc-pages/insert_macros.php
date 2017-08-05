@@ -20,13 +20,7 @@ $conn = new MySQL_Tool();
 $protein = $_POST['protein'];
 $carbs = $_POST['carbs'];
 $fat = $_POST['fat'];
-
-// -- Sanitize
-// ------------------------------------------------------
-if(!is_int($protein) || !is_int($carbs) || !is_int($fat)){
-    die("Incorrect Data Input"); // Kill if possible injection
-}
-$description = $conn->filterLetterString($_POST['description']);
+$description = $_POST['description'];
 
 // -- Process Data and Insert
 // ------------------------------------------------------
@@ -37,9 +31,6 @@ $conn->closeConn();
 
 // redirect page
 // ------------------------------------------------------
-if($_SERVER['REMOTE_ADDR'] == '192.168.1.70'){
-    header( "Location: http://192.168.1.76/MacroTrackerWebsite/php/home.php" );
-} else {
-    header("Location: http://sriver.hopto.org/MacroTrackerWebsite/php/home.php");
-}
+header( "Location: http://localhost/xampp/MacroTrackerWebsite/php/home.php" );
+
 exit();

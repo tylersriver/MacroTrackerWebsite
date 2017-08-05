@@ -33,23 +33,27 @@ include_once ("lib/MySQL_Tool.php");
 
 // -- Open Connection and search
 // ------------------------------------------------------
-$conn = new MySQL_Tool();
 $description = $_POST['description'];
-$sql = "SELECT description, protein, fat, carbs 
-        FROM mealEntries
-         WHERE description  
-         LIKE '%".$description."%'";
-$result = $conn->executeSelect($sql);
+if($description != null) {
+    $conn = new MySQL_Tool();
+    $sql = "SELECT description, protein, fat, carbs 
+            FROM mealEntries
+            WHERE description  
+            LIKE '%".$description."%'";
+    $result = $conn->executeSelect($sql);
 
-// -- echo information in table
-// ------------------------------------------------------
-while ($row = mysqli_fetch_row($result)){
-    echo "<tr>";
-    echo "    <td>".$row[0]."</td>";
-    echo "    <td>".$row[1]."</td>";
-    echo "    <td>".$row[2]."</td>";
-    echo "    <td>".$row[3]."</td>";
-    echo "</tr>";
-} ?>
+    $conn->closeConn();
+
+    // -- echo information in table
+    // ------------------------------------------------------
+    while ($row = mysqli_fetch_row($result)){
+        echo "<tr>";
+        echo "    <td>".$row[0]."</td>";
+        echo "    <td>".$row[1]."</td>";
+        echo "    <td>".$row[2]."</td>";
+        echo "    <td>".$row[3]."</td>";
+        echo "</tr>";
+    } 
+}?>
         </table>
     </div>
