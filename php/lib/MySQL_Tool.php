@@ -100,12 +100,12 @@ class MySQL_Tool
      *
      * @param $sql string
      * @param $params array
-     * @return mysqli_result
+     * @return bool | mysqli_result
      */
     public function query($sql, $params)
     {
         // Initiate statement
-        $stmt = $conn->prepare($sql);
+        $stmt = $this->conn->prepare($sql);
         
         // Bind Params
         foreach($params as $p){
@@ -119,14 +119,15 @@ class MySQL_Tool
         } // End SQL
 
         // Get Results
-        $stmt->bind_result($result);
-        $stmt->fetch();
+        while ($result = $stmt->fetch_assoc()){
+            $returnArray[] = $result
+        }
 
         if (empty($result)) {
             return false;
         } else {
             $this->setPass(true);
-            return $result;
+            return $returnArray;
         }
 
     }

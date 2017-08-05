@@ -40,7 +40,9 @@ if($description != null) {
             FROM mealEntries
             WHERE description  
             LIKE ?";
-    $result = $conn->query($sql, array('%'.$description.'%'));
+    $description = $description.'%';
+
+    $result = $conn->query($sql, array($description));
 
     $conn->closeConn();
 
