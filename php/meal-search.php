@@ -31,9 +31,15 @@ include_once ("lib/MySQL_Tool.php");
         </tr>
 <?php
 
+// -- Pull Post var
+// ------------------------------------------------------
+$description = 
+        ( ($_POST != null) 
+            ? $_POST['description'] 
+            : null );
+
 // -- Open Connection and search
 // ------------------------------------------------------
-$description = $_POST['description'];
 if($description != null) {
     $conn = new MySQL_Tool();
     $sql = "SELECT description, protein, fat, carbs 

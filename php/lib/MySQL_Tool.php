@@ -125,6 +125,7 @@ class MySQL_Tool
             $returnArray[] = $temp;
         }
 
+        // Return results
         if (empty($returnArray)) {
             return false;
         } else {
