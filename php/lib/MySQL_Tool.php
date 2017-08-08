@@ -109,24 +109,25 @@ class MySQL_Tool
         
         // Bind Params
         foreach($params as $p){
-            $stmt->bind_param($p);
+            $stmt->bind_param("s",$p);
         }
 
         try { // Execute SQL
             $stmt->execute();
+            $result = $stmt->get_result();
+            $stmt->close();
         } catch (Exception $err) {
             die("Query Failed: ".$err->getMessage());
         } // End SQL
 
         // Get Results
-        while ($result = $stmt->fetch_assoc()){
-            $returnArray[] = $result
+        while ($temp = $result->fetch_assoc()){
+            $returnArray[] = $temp;
         }
 
-        if (empty($result)) {
+        if (empty($returnArray)) {
             return false;
         } else {
-            $this->setPass(true);
             return $returnArray;
         }
 
@@ -135,7 +136,7 @@ class MySQL_Tool
     /**
      * close mysql conn
      */
-    public function closeConn()
+    public function close()
     {
         $this->conn->close();
     }

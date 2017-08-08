@@ -19,7 +19,7 @@ $conn = new MySQL_Tool();
 $sql  = "SELECT protein, fat, carbs FROM dailyMacros";
 $result = $conn->executeSelect($sql);
 $daily = $result->fetch_row();
-$conn->closeConn();
+$conn->close();
 
 // Store in variables
 // ------------------------------------------------------

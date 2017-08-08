@@ -72,6 +72,8 @@ echo "<td>".$conn->getRemainingMacro("protein")."</td>";
 echo "<td>".$conn->getRemainingMacro("fat")."</td>";
 echo "<td>".$conn->getRemainingMacro("carbs")."</td>";
 echo "<tr>";
+
+$conn->close()
 ?>
 </table>
 </div>

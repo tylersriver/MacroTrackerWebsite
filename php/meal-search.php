@@ -44,18 +44,18 @@ if($description != null) {
 
     $result = $conn->query($sql, array($description));
 
-    $conn->closeConn();
-
     // -- echo information in table
     // ------------------------------------------------------
-    while ($row = mysqli_fetch_row($result)){
+    foreach ($result as $row){
         echo "<tr>";
-        echo "    <td>".$row[0]."</td>";
-        echo "    <td>".$row[1]."</td>";
-        echo "    <td>".$row[2]."</td>";
-        echo "    <td>".$row[3]."</td>";
+        echo "    <td>".$row['description']."</td>";
+        echo "    <td>".$row['protein']."</td>";
+        echo "    <td>".$row['fat']."</td>";
+        echo "    <td>".$row['carbs']."</td>";
         echo "</tr>";
     } 
+
+    $conn->close();
 }?>
         </table>
     </div>

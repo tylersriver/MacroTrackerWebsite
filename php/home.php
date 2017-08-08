@@ -18,7 +18,7 @@ $protein_remaining = $conn->getRemainingMacro("protein");
 $fat_remaining = $conn->getRemainingMacro("fat");
 $carbs_remaining = $conn->getRemainingMacro("carbs");
 
-$conn->closeConn();
+$conn->close();
 ?>
 <div>
     <h2>Current Macros Left</h2>
