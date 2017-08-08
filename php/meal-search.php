@@ -11,8 +11,7 @@
 
 // -- Includes
 // ------------------------------------------------------
-include_once ("global-header.php");
-include_once ("lib/MySQL_Tool.php");
+include_once ("lib/lib-includes.php");
 ?>
 <link rel="stylesheet" type="text/css" href="../styles/table-styles.css">
 <div>

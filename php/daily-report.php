@@ -11,8 +11,7 @@
 
 // -- Includes
 // ------------------------------------------------------
-include_once ("global-header.php");
-include_once ("lib/MySQL_Tool.php");
+include_once ("lib/lib-includes.php");
 ?>
 <div>
     <h2>Meal Entries for Today</h2>

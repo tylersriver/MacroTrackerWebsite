@@ -6,8 +6,7 @@
 
 // -- Includes
 // ------------------------------------------------------
-include_once ("global-header.php");
-include_once ("lib/MySQL_Tool.php");
+include_once ("lib/lib-includes.php");
 
 // -- Setup MySQL Connection and pull information
 // ------------------------------------------------------

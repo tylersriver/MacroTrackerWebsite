@@ -12,6 +12,10 @@
  * a sql connection and different associated
  * functions
  */
+
+// Includes
+include_once ("lib-utils.php");
+
 class MySQL_Tool
 {
     // -- Fields
@@ -108,9 +112,12 @@ class MySQL_Tool
         $stmt = $this->conn->prepare($sql);
         
         // Bind Params
+        $types = "";
         foreach($params as $p){
-            $stmt->bind_param("s",$p);
+            $types .= "s";
         }
+        $bindsArray = array_merge(array($types), $params);
+        call_user_func_array(array($stmt, 'bind_param'), makeValuesReferenced($bindsArray));
 
         try { // Execute SQL
             $stmt->execute();
