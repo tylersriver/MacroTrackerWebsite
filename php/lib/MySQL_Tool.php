@@ -62,7 +62,7 @@ class MySQL_Tool
      * Execute an insert statement
      * @param $sql string
      */
-    public function executeInsert($sql, $params)
+    public function executeInsert($sql)
     {
         try { // Execute insert
             mysqli_query($this->conn, $sql);

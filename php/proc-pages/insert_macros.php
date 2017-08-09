@@ -27,7 +27,7 @@ $description = $_POST['description'];
 $sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat, description)
           VALUES (NOW(), $protein, $carbs, $fat, '$description')";
 $conn->executeInsert($sql);
-$conn->closeConn();
+$conn->close();
 
 // redirect page
 // ------------------------------------------------------
