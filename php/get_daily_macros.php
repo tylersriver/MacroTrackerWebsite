@@ -16,7 +16,7 @@ include_once ("lib/lib-includes.php");
 // ------------------------------------------------------
 $conn = new MySQL_Tool();
 $sql  = "SELECT protein, fat, carbs FROM dailyMacros";
-$result = $conn->executeSelect($sql);
+$result = $conn->query($sql);
 $daily = $result->fetch_row();
 $conn->close();
 

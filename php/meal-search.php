@@ -48,18 +48,18 @@ if($description != null) {
     $description = $description.'%';
 
     $result = $conn->query($sql, array($description));
+    $result = $result->fetch_assoc();
 
     // -- echo information in table
     // ------------------------------------------------------
     foreach ($result as $row){
         echo "<tr>";
-        echo "    <td>".$row['description']."</td>";
-        echo "    <td>".$row['protein']."</td>";
-        echo "    <td>".$row['fat']."</td>";
-        echo "    <td>".$row['carbs']."</td>";
+        echo "    <td>".$row."</td>";
+        echo "    <td>".$row."</td>";
+        echo "    <td>".$row."</td>";
+        echo "    <td>".$row."</td>";
         echo "</tr>";
     } 
-
     $conn->close();
 }?>
         </table>

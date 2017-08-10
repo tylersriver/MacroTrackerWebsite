@@ -30,7 +30,7 @@ include_once ("lib/lib-includes.php");
 // ------------------------------------------------------
 $conn = new MySQL_Tool();
 $sql = "SELECT TIME(entryTime), description, protein, fat, carbs FROM mealEntries WHERE DATE(entryTime) = DATE(NOW())";
-$result = $conn->executeSelect($sql);
+$result = $conn->query($sql);
 
 // -- echo information in table
 // ------------------------------------------------------

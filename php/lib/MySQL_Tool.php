@@ -106,38 +106,39 @@ class MySQL_Tool
      * @param $params array
      * @return bool | mysqli_result
      */
-    public function query($sql, $params)
+    public function query($sql, $params = array())
     {
+        $sql = trim($sql); // Trim extra whitespace
+        $params = (array)$params;
+        $result = false;
+
         // Initiate statement
         $stmt = $this->conn->prepare($sql);
+        if(!$stmt) {
+            return $result;
+        }
         
-        // Bind Params
-        $types = "";
-        foreach($params as $p){
-            $types .= "s";
-        }
-        $bindsArray = array_merge(array($types), $params);
-        call_user_func_array(array($stmt, 'bind_param'), makeValuesReferenced($bindsArray));
+        // Build types array
+        $types = buildTypeStringFromArray($params);
 
-        try { // Execute SQL
-            $stmt->execute();
-            $result = $stmt->get_result();
-            $stmt->close();
-        } catch (Exception $err) {
-            die("Query Failed: ".$err->getMessage());
-        } // End SQL
-
-        // Get Results
-        while ($temp = $result->fetch_assoc()){
-            $returnArray[] = $temp;
+        // Bind params
+        if (!empty($params)) {
+            $binds = array($types);
+            $binds = array_merge($binds, $params);
+            $binds = makeValuesReferenced($binds);
+            call_user_func_array(array($stmt, 'bind_param'), $binds);
         }
 
-        // Return results
-        if (empty($returnArray)) {
-            return false;
-        } else {
-            return $returnArray;
+        // Execute SQL
+        if($stmt->execute()) {
+            if($stmt->affected_rows >=0 ) {
+                $result = true;
+            } else {
+                $result = $stmt->get_result();
+            }
         }
+
+        return $result;
 
     }
 
@@ -163,7 +164,7 @@ class MySQL_Tool
         $sqlSelect = "SELECT ".$macro." FROM dailyMacros";
         $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
 
-        $result = $this->executeSelect($sqlSelect);
+        $result = $this->query($sqlSelect);
         $macro = $result->fetch_row();
         $dailyMacro = $macro[0];
 
@@ -181,7 +182,7 @@ class MySQL_Tool
     public function dailySum($macro)
     {
         $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
-        $macro_result = $this->executeSelect($sqlSelectSum);
+        $macro_result = $this->query($sqlSelectSum);
         $row = $macro_result->fetch_row();
         return (int) $row[0];
     }
