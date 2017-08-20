@@ -59,47 +59,6 @@ class MySQL_Tool
     }
 
     /**
-     * Execute an insert statement
-     * @param $sql string
-     */
-    public function executeInsert($sql)
-    {
-        try { // Execute insert
-            mysqli_query($this->conn, $sql);
-        } catch (Exception $err) {
-            die("Insert Failed: ".$err->getMessage());
-        }
-    }
-
-    /**
-     * Execute select statement
-     * @param $sql
-     * @return bool|mysqli_result
-     */
-    public function executeSelect($sql)
-    {
-        try { // Execute insert
-            $result = mysqli_query($this->conn, $sql);
-        } catch (Exception $err) {
-            die("Insert Failed: ".$err->getMessage());
-        }
-        return $result;
-    }
-
-    /**
-     * Execute Update statement
-     * @param $sql string
-     */
-    public function executeUpdate($sql)
-    {
-        try { // Execute insert
-            mysqli_query($this->conn, $sql);
-        } catch (Exception $err) {
-            die("Update Failed: ".$err->getMessage());
-        } // End SQL
-    }
-
-    /**
      * MySQLi bound query function
      *
      * @param $sql string
