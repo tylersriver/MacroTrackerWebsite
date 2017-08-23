@@ -90,7 +90,7 @@ class MySQL_Tool
 
         // Execute SQL
         if($stmt->execute()) {
-            if($stmt->affected_rows >=0 ) {
+            if($stmt->affected_rows >= 0 ) {
                 $result = true;
             } else {
                 $result = $stmt->get_result();
@@ -98,7 +98,6 @@ class MySQL_Tool
         }
 
         return $result;
-
     }
 
     /**
@@ -127,7 +126,7 @@ class MySQL_Tool
         $macro = $result->fetch_row();
         $dailyMacro = $macro[0];
 
-        $macro_result = mysqli_fetch_row($this->executeSelect($sqlSelectSum));
+        $macro_result = mysqli_fetch_row($this->query($sqlSelectSum));
         $macro_day_sum = $macro_result[0];
 
         return $dailyMacro - $macro_day_sum;
