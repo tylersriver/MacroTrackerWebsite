@@ -41,23 +41,22 @@ $description =
 // ------------------------------------------------------
 if($description != null) {
     $conn = new MySQL_Tool();
-    $sql = "SELECT description, protein, fat, carbs 
+    $sql = "SELECT DISTINCT description, protein, fat, carbs 
             FROM mealEntries
             WHERE description  
             LIKE ?";
     $description = $description.'%';
 
     $result = $conn->query($sql, array($description));
-    $result = $result->fetch_assoc();
 
     // -- echo information in table
     // ------------------------------------------------------
-    foreach ($result as $row){
+    while ($row = $result->fetch_assoc()){
         echo "<tr>";
-        echo "    <td>".$row."</td>";
-        echo "    <td>".$row."</td>";
-        echo "    <td>".$row."</td>";
-        echo "    <td>".$row."</td>";
+        echo "    <td>".$row['description']."</td>";
+        echo "    <td>".$row['protein']."</td>";
+        echo "    <td>".$row['fat']."</td>";
+        echo "    <td>".$row['carbs']."</td>";
         echo "</tr>";
     } 
     $conn->close();
