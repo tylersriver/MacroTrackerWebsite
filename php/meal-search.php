@@ -11,8 +11,7 @@
 
 // -- Includes
 // ------------------------------------------------------
-include_once ("global-header.php");
-include_once ("lib/MySQL_Tool.php");
+include_once ("lib/lib-includes.php");
 ?>
 <link rel="stylesheet" type="text/css" href="../styles/table-styles.css">
 <div>
@@ -31,29 +30,36 @@ include_once ("lib/MySQL_Tool.php");
         </tr>
 <?php
 
+// -- Pull Post var
+// ------------------------------------------------------
+$description = 
+        ( ($_POST != null) 
+            ? $_POST['description'] 
+            : null );
+
 // -- Open Connection and search
 // ------------------------------------------------------
-$description = $_POST['description'];
 if($description != null) {
     $conn = new MySQL_Tool();
-    $sql = "SELECT description, protein, fat, carbs 
+    $sql = "SELECT DISTINCT description, protein, fat, carbs 
             FROM mealEntries
             WHERE description  
-            LIKE '%".$description."%'";
-    $result = $conn->executeSelect($sql);
+            LIKE ?";
+    $description = $description.'%';
 
-    $conn->closeConn();
+    $result = $conn->query($sql, array($description));
 
     // -- echo information in table
     // ------------------------------------------------------
-    while ($row = mysqli_fetch_row($result)){
+    while ($row = $result->fetch_assoc()){
         echo "<tr>";
-        echo "    <td>".$row[0]."</td>";
-        echo "    <td>".$row[1]."</td>";
-        echo "    <td>".$row[2]."</td>";
-        echo "    <td>".$row[3]."</td>";
+        echo "    <td>".$row['description']."</td>";
+        echo "    <td>".$row['protein']."</td>";
+        echo "    <td>".$row['fat']."</td>";
+        echo "    <td>".$row['carbs']."</td>";
         echo "</tr>";
     } 
+    $conn->close();
 }?>
         </table>
     </div>

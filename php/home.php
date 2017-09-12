@@ -6,8 +6,7 @@
 
 // -- Includes
 // ------------------------------------------------------
-include_once ("global-header.php");
-include_once ("lib/MySQL_Tool.php");
+include_once ("lib/lib-includes.php");
 
 // -- Setup MySQL Connection and pull information
 // ------------------------------------------------------
@@ -18,7 +17,7 @@ $protein_remaining = $conn->getRemainingMacro("protein");
 $fat_remaining = $conn->getRemainingMacro("fat");
 $carbs_remaining = $conn->getRemainingMacro("carbs");
 
-$conn->closeConn();
+$conn->close();
 ?>
 <div>
     <h2>Current Macros Left</h2>

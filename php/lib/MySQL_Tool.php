@@ -12,6 +12,10 @@
  * a sql connection and different associated
  * functions
  */
+
+// Includes
+include_once ("lib-utils.php");
+
 class MySQL_Tool
 {
     // -- Fields
@@ -55,50 +59,51 @@ class MySQL_Tool
     }
 
     /**
-     * Execute an insert statement
+     * MySQLi bound query function
+     *
      * @param $sql string
+     * @param $params array
+     * @return bool | mysqli_result
      */
-    public function executeInsert($sql)
+    public function query($sql, $params = array())
     {
-        try { // Execute insert
-            mysqli_query($this->conn, $sql);
-        } catch (Exception $err) {
-            die("Insert Failed: ".$err->getMessage());
-        }
-    }
+        $sql = trim($sql); // Trim extra whitespace
+        $params = (array)$params;
+        $result = false;
 
-    /**
-     * Execute select statement
-     * @param $sql
-     * @return bool|mysqli_result
-     */
-    public function executeSelect($sql)
-    {
-        try { // Execute insert
-            $result = mysqli_query($this->conn, $sql);
-        } catch (Exception $err) {
-            die("Insert Failed: ".$err->getMessage());
+        // Initiate statement
+        $stmt = $this->conn->prepare($sql);
+        if(!$stmt) {
+            return $result;
         }
+        
+        // Build types array
+        $types = buildTypeStringFromArray($params);
+
+        // Bind params
+        if (!empty($params)) {
+            $binds = array($types);
+            $binds = array_merge($binds, $params);
+            $binds = makeValuesReferenced($binds);
+            call_user_func_array(array($stmt, 'bind_param'), $binds);
+        }
+
+        // Execute SQL
+        if($stmt->execute()) {
+            if($stmt->affected_rows >= 0 ) {
+                $result = true;
+            } else {
+                $result = $stmt->get_result();
+            }
+        }
+
         return $result;
-    }
-
-    /**
-     * Execute Update statement
-     * @param $sql string
-     */
-    public function executeUpdate($sql)
-    {
-        try { // Execute insert
-            mysqli_query($this->conn, $sql);
-        } catch (Exception $err) {
-            die("Update Failed: ".$err->getMessage());
-        } // End SQL
     }
 
     /**
      * close mysql conn
      */
-    public function closeConn()
+    public function close()
     {
         $this->conn->close();
     }
@@ -117,11 +122,11 @@ class MySQL_Tool
         $sqlSelect = "SELECT ".$macro." FROM dailyMacros";
         $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
 
-        $result = $this->executeSelect($sqlSelect);
+        $result = $this->query($sqlSelect);
         $macro = $result->fetch_row();
         $dailyMacro = $macro[0];
 
-        $macro_result = mysqli_fetch_row($this->executeSelect($sqlSelectSum));
+        $macro_result = mysqli_fetch_row($this->query($sqlSelectSum));
         $macro_day_sum = $macro_result[0];
 
         return $dailyMacro - $macro_day_sum;
@@ -135,7 +140,7 @@ class MySQL_Tool
     public function dailySum($macro)
     {
         $sqlSelectSum = "SELECT SUM(m.".$macro.") FROM mealEntries m WHERE DATE(entryTime) = DATE(NOW())";
-        $macro_result = $this->executeSelect($sqlSelectSum);
+        $macro_result = $this->query($sqlSelectSum);
         $row = $macro_result->fetch_row();
         return (int) $row[0];
     }
