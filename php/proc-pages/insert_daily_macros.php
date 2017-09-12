@@ -26,9 +26,10 @@ $conn = new MySQL_Tool();
 // Update Macros
 // ------------------------------------------------------
 $sql = "UPDATE dailyMacros
-          SET protein = $protein,  fat = $fat, carbs = $carbs";
-$conn->executeUpdate($sql);
-$conn->closeConn();
+          SET protein = ?, fat = ?, carbs = ?";
+$params = array($protein, $fat, $carbs);
+$conn->query($sql, $params);
+$conn->close();
 
 // redirect page
 // ------------------------------------------------------

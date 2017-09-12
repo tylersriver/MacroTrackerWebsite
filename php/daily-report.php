@@ -11,8 +11,7 @@
 
 // -- Includes
 // ------------------------------------------------------
-include_once ("global-header.php");
-include_once ("lib/MySQL_Tool.php");
+include_once ("lib/lib-includes.php");
 ?>
 <div>
     <h2>Meal Entries for Today</h2>
@@ -31,7 +30,7 @@ include_once ("lib/MySQL_Tool.php");
 // ------------------------------------------------------
 $conn = new MySQL_Tool();
 $sql = "SELECT TIME(entryTime), description, protein, fat, carbs FROM mealEntries WHERE DATE(entryTime) = DATE(NOW())";
-$result = $conn->executeSelect($sql);
+$result = $conn->query($sql);
 
 // -- echo information in table
 // ------------------------------------------------------
@@ -72,6 +71,8 @@ echo "<td>".$conn->getRemainingMacro("protein")."</td>";
 echo "<td>".$conn->getRemainingMacro("fat")."</td>";
 echo "<td>".$conn->getRemainingMacro("carbs")."</td>";
 echo "<tr>";
+
+$conn->close()
 ?>
 </table>
 </div>

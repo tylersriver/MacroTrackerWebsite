@@ -10,16 +10,15 @@
 
 // -- Includes
 // ------------------------------------------------------
-include_once ("global-header.php");
-include_once ("lib/MySQL_Tool.php");
+include_once ("lib/lib-includes.php");
 
 // -- open conn and Select From daily
 // ------------------------------------------------------
 $conn = new MySQL_Tool();
 $sql  = "SELECT protein, fat, carbs FROM dailyMacros";
-$result = $conn->executeSelect($sql);
+$result = $conn->query($sql);
 $daily = $result->fetch_row();
-$conn->closeConn();
+$conn->close();
 
 // Store in variables
 // ------------------------------------------------------

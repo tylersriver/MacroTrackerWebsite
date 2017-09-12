@@ -25,9 +25,10 @@ $description = $_POST['description'];
 // -- Process Data and Insert
 // ------------------------------------------------------
 $sql  = "INSERT INTO mealEntries (entryTime, protein, carbs, fat, description)
-          VALUES (NOW(), $protein, $carbs, $fat, '$description')";
-$conn->executeInsert($sql);
-$conn->closeConn();
+          VALUES (NOW(), ?, ?, ?, ?)";
+$params = array($protein, $carbs, $fat, $description);
+$conn->query($sql, $params);
+$conn->close();
 
 // redirect page
 // ------------------------------------------------------
